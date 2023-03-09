@@ -8,6 +8,7 @@ function App() {
   const taskArray = []
   return (
     <div className="App">
+      <div>
       <h1>My Tasks</h1>
       Add New Task
       <input type="text"
@@ -20,25 +21,21 @@ function App() {
         tasks.push(taskName)
         }
       }}>Add</button>
- 
-      <table width="100%">
-        <tr>
-          <td align='center'>
-            <table width="18%">
-                  {tasks.map(
-                  (task)=>(
-                    <tr>
-                      <td width="10"><input type="checkbox"/></td>
-                      <td>{task}</td>
-                    </tr>
-                    )
-                  )}
-             </table>
-            </td>
-        </tr>
-      </table>
-      
-        
+     </div>
+     <div>
+        {
+          tasks.map(
+            (task)=>(
+              <>
+               <input type="checkbox"/>
+               &nbsp;
+               {task}
+               <br/>
+              </>
+            )
+          )
+        }
+      </div>
     </div>
   );
 }
