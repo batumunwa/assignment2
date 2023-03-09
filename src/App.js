@@ -22,7 +22,20 @@ function App() {
         }
       }}>Add</button>
      </div>
-     
+     <div>
+        {
+          tasks.map(
+            (task)=>(
+              <>
+               <input type="checkbox"/>
+               &nbsp;
+               {task}
+               <br/>
+              </>
+            )
+          )
+        }
+      </div>
     </div>
   );
 }
